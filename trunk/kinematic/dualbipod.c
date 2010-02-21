@@ -13,9 +13,9 @@
 * Copyright (c) 2004 All rights reserved.
 *
 * Last change:
-* $Revision: 1.01 $
-* $Author: G.Gleixner $
-* $Date: 20.05.2009 $
+* $Revision$
+* $Author$
+* $Date$
 ********************************************************************/
 
 #include "kinematics.h"		/* these decls */
