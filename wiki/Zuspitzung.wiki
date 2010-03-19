@@ -27,6 +27,8 @@ Die entsprechende Änderung im g-Code ist schnell gemacht. (Beispiel fehlt noch)
 
 == Schneiden des Profils ==
 
+Dabei können prinzipiell unterschiedliche Geschwindikeiten auf root- und tip-Seite auftreten, weil die Drahtbewegung einerseits synchronsiert sein muss, andererseits aber die Wege unterschiedlich lang sind. Der Geschwindigkeitsbefehl bei EMC (F...) bezieht sich immer auf die XYZ Achsen, in unserem fall also auf das XY Koordinatensystem. Das UV System wird "mitbewegt", so dass die programmierten Endpunkte zeitgleich erreicht werden. Wenn man also die root Seite auf XY legt, dann fährt diese Seite mit der gewählten Geschwindigkeit, die tip Seite entsprechend langsamer.
+
 === Umschalten der XY -UV Ebenen ===
 Ich empfehle folgendes Verfahren:
 Ich schneide immer mit root = X-Y. Damit daraus eine rechte und eine linke Hälfte wird, muss man an der Schneide die Seiten vertauschen. Das ist auch weiter nicht schwierig:
