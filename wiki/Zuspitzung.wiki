@@ -1,4 +1,4 @@
-#summary Profili Daten verarbeiten
+#summary Profili Daten bei großer Zuspitzung verarbeiten
 
 = Besonderheiten bei großer Zuspitzung =
 
