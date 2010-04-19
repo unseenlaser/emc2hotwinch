@@ -25,6 +25,8 @@ Dafür habe ich folgende Lösung:
 Der g-code wird manuell so abgeändert, dass die Start/End-Position nicht mehr rechtwinkelig ist, sondern entsprechend dem Winkel der Endleiste (im Bild gelb). Damit ist gewährleistet, dass der Draht schön gleichmässig auf beiden Seiten fährt.
 Die entsprechende Änderung im g-Code ist schnell gemacht. (Beispiel fehlt noch)
 
+Mit der neuen Profili Version (ab 2.26) erübrigt sich dieses Vorgehen, wenn man die neue Option verwendet, die Fläche an der Endleiste auszurichten.
+
 == Schneiden des Profils ==
 
 Dabei können prinzipiell unterschiedliche Geschwindikeiten auf root- und tip-Seite auftreten, weil die Drahtbewegung einerseits synchronsiert sein muss, andererseits aber die Wege unterschiedlich lang sind. Der Geschwindigkeitsbefehl bei EMC (F...) bezieht sich immer auf die XYZ Achsen, in unserem fall also auf das XY Koordinatensystem. Das UV System wird "mitbewegt", so dass die programmierten Endpunkte zeitgleich erreicht werden. Wenn man also die root Seite auf XY legt, dann fährt diese Seite mit der gewählten Geschwindigkeit, die tip Seite entsprechend langsamer.
@@ -38,4 +40,4 @@ Hinein- und herausfahren muss nach dem oben beschriebenen Verfahren korrigiert w
 
 === Zwei unterschiedlich g-codes ===
 Eine andere Möglichkeit ist, zwei verschiedene g-code files zu erzeugen. Das kann man in Profili machen, man muss aber die Geschwindigkeiten entsprechend der Zuspitzung korrigieren, da sich die vorgegebene Geschwindigkeit immer auf die XY Ebene bezieht. 
-Auch hier muss das hinein- und herausfahren nach dem oben beschriebenen Verfahren korrigiert werden, sonst erfolgt das auf der tip Seite viel zu schnell, bzw auf der root seite zu langsam.
+Auch hier muss ggfls. das hinein- und herausfahren nach dem oben beschriebenen Verfahren korrigiert werden, sonst erfolgt das auf der tip Seite viel zu schnell, bzw auf der root seite zu langsam.
