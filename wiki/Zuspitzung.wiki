@@ -3,6 +3,7 @@
 = Besonderheiten bei großer Zuspitzung =
 
 Bild siehe download Bereich.
+<img src="http://emc2hotwinch.googlecode.com/files/Beispiel1.jpg" />
 
 Bei Profilen mit großer Zuspitzung treten zwangsläufig unterschiedliche Geschwindigkeiten an den beiden Seiten (root und tip) auf.
 Nehmen wir der Einfachheit halber an, die Vorderkante (Nasenleiste, grün im Bild, das schwarze Rechteck ist der Styroblock, von oben)) habe keine Pfeilung.
