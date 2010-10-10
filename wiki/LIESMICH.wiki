@@ -1,0 +1,13 @@
+#Versionen und Dateien in trunk und branches
+
+= Versionen =
+
+emc2hotwinch unterstützt derzeit die EMC Version 2.3.x, basierend auf Ubuntu 8.04 und die Version 2.4.x, basierend auf Ubuntu 10.04
+
+= 10.04 / 2.4.x =
+
+Dies ist die aktuelle Version in trunk. Weiterentwicklung findet hauptsächlich hier statt.
+
+= 8.04 / 2.3.x =
+
+Das war die ursprüngliche, erste Version. Sie befindet sich jetzt in branches/Ub_08_04-EMC_2_3. Wer diese Version herunterladen will: im svn checkout befehl trunk ersetzen durch branches/Ub_08_04-EMC_2_3
