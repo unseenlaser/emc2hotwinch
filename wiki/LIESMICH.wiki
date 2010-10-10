@@ -1,4 +1,4 @@
-#Versionen und Dateien in trunk und branches
+#summary Versionen und Dateien in trunk und branches
 
 = Versionen =
 
