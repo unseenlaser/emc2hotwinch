@@ -152,6 +152,8 @@ KINEMATICS_TYPE kinematicsType()
 #include "rtapi_app.h"		/* RTAPI realtime module decls */
 #include "hal.h"
 
+#define HAL_SUCCESS 0
+
 EXPORT_SYMBOL(kinematicsType);
 EXPORT_SYMBOL(kinematicsForward);
 EXPORT_SYMBOL(kinematicsInverse);
