@@ -10,7 +10,7 @@ Dies ist die aktuelle Version in trunk. Weiterentwicklung findet hauptsächlich 
 
 Zum herunterladen, an der Linux Konsole eingeben:
 
-svn checkout http://emc2hotwinch.googlecode.com/svn/trunk/ emc2hotwinch
+`svn checkout http://emc2hotwinch.googlecode.com/svn/trunk/ emc2hotwinch`
 
 = 8.04 / 2.3.x =
 
@@ -18,4 +18,4 @@ Das war die ursprüngliche, erste Version. Sie befindet sich jetzt in branches/U
 
 Zum herunterladen, an der Linux Konsole eingeben:
 
-svn checkout http://emc2hotwinch.googlecode.com/svn/branches/Ub_08_04-EMC_2_3/ emc2hotwinch
+`svn checkout http://emc2hotwinch.googlecode.com/svn/branches/Ub_08_04-EMC_2_3/ emc2hotwinch`
