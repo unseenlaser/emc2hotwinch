@@ -8,6 +8,14 @@ emc2hotwinch unterstützt derzeit die EMC Version 2.3.x, basierend auf Ubuntu 8.
 
 Dies ist die aktuelle Version in trunk. Weiterentwicklung findet hauptsächlich hier statt.
 
+Zum herunterladen, an der Linux Konsole eingeben:
+
+svn checkout http://emc2hotwinch.googlecode.com/svn/trunk/ emc2hotwinch
+
 = 8.04 / 2.3.x =
 
 Das war die ursprüngliche, erste Version. Sie befindet sich jetzt in branches/Ub_08_04-EMC_2_3. Wer diese Version herunterladen will: im svn checkout befehl trunk ersetzen durch branches/Ub_08_04-EMC_2_3
+
+Zum herunterladen, an der Linux Konsole eingeben:
+
+svn checkout http://emc2hotwinch.googlecode.com/svn/branches/Ub_08_04-EMC_2_3/ emc2hotwinch
