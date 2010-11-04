@@ -1,11 +1,9 @@
 
-Heissdraht Styro Schneideanlage für Linearachcsen
+Heissdraht Styro Schneideanlage für Linearachsen
 Hotwire foam cutting machine for linear axis
 
 
-Use 
-hw_left  for X-Y on left  side
-hw_right for X-Y on right side
+Use scriptd re, li to mirror machine (swap XY <-> UV)
 
 Turntable A - Joint 3
 
