@@ -1,0 +1,11 @@
+# unlink pins
+
+unlinkp parport.0.pin-01-out
+unlinkp parport.0.pin-02-out
+unlinkp parport.0.pin-03-out
+unlinkp parport.0.pin-04-out
+unlinkp parport.0.pin-05-out
+unlinkp parport.0.pin-06-out
+unlinkp parport.0.pin-07-out
+unlinkp parport.0.pin-08-out
+unlinkp parport.0.pin-09-out
