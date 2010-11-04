@@ -1,0 +1,3 @@
+#!/bin/sh
+halcmd -f unlink.hal
+halcmd -f p_right.hal
