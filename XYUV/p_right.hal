@@ -1,0 +1,30 @@
+# Benutzerdefinierte HAL-Anweisungen können nachfolgend angegeben werden
+# Diese Datei wird überschrieben, wenn stepconf erneut ausgeführt wird.
+#loadrt probe_parport
+loadrt hal_parport cfg=0x378
+
+addf parport.0.read base-thread
+addf parport.0.write base-thread
+addf parport.0.reset base-thread
+
+# pinout for 4 stepper x y u v
+#
+#net estop-out => parport.0.pin-01-out
+# pin2
+net xstep => parport.0.pin-02-out
+# pin3
+net xdir => parport.0.pin-03-out
+setp parport.0.pin-03-out-invert 1
+# pin4
+net ystep => parport.0.pin-04-out
+# pin5
+net ydir => parport.0.pin-05-out
+# pin6
+net ustep => parport.0.pin-06-out
+# pin7
+net udir => parport.0.pin-07-out
+# pin8
+net vstep => parport.0.pin-08-out
+# pin9
+net vdir => parport.0.pin-09-out
+setp parport.0.pin-09-out-invert 1
