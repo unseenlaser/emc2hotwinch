@@ -1,10 +1,15 @@
 
-Heissdraht Styro Schneideanlage für Linearachsen
-Hotwire foam cutting machine for linear axis
+Heissdraht Styro Schneideanlage XY - UV Achsen
+Hotwire foam cutting machine XY - UV axes
 
+Wähle hotwire für Linearachsen
+Use hotwire for linear axis
+
+Wähle hotwinch für Seilwindenkinematic
+Use hotwinch for winch kinematic
 
 Use scriptd re, li to mirror machine (swap XY <-> UV)
 
 Turntable A - Joint 3
 
-last update 03.Nov.2010
+last update 05.Nov.2010
