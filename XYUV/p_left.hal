@@ -12,11 +12,13 @@ net vstep => parport.0.pin-04-out
 #setp parport.0.pin-04-out-reset 1
 # pin5
 net vdir => parport.0.pin-05-out
+#setp parport.0.pin-03-out-invert 1
 # pin6
 net xstep => parport.0.pin-06-out
 #setp parport.0.pin-06-out-reset 1
 # pin7
 net xdir => parport.0.pin-07-out
+#setp parport.0.pin-03-out-invert 1
 # pin8
 net ystep => parport.0.pin-08-out
 #setp parport.0.pin-08-out-reset 1

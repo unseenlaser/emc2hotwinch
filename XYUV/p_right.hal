@@ -1,6 +1,7 @@
 # pinout for 4 stepper x y u v
 #
-#net estop-out => parport.0.pin-01-out
+# pin1
+net estop-out => parport.0.pin-01-out
 # pin2
 net xstep => parport.0.pin-02-out
 #setp parport.0.pin-02-out-reset 1
@@ -12,11 +13,13 @@ net ystep => parport.0.pin-04-out
 #setp parport.0.pin-04-out-reset 1
 # pin5
 net ydir => parport.0.pin-05-out
+#setp parport.0.pin-03-out-invert 1
 # pin6
 net ustep => parport.0.pin-06-out
 #setp parport.0.pin-06-out-reset 1
 # pin7
 net udir => parport.0.pin-07-out
+#setp parport.0.pin-03-out-invert 1
 # pin8
 net vstep => parport.0.pin-08-out
 #setp parport.0.pin-08-out-reset 1
