@@ -2,6 +2,8 @@
 
 = Versionen =
 
+emc2hotwinch ist geeignet zum Betrieb von cnc gesteuerten Heissdraht Styroporschneideanlagen mit EMC2. Dabei kann eine konventionelle Linearachsenmechanik verwendet werden, oder eine einfache Seilwindenmechanik.
+
 emc2hotwinch unterstützt derzeit die EMC Version 2.3.x, basierend auf Ubuntu 8.04 und die Version 2.4.x, basierend auf Ubuntu 10.04
 
 Bitte nicht die Software aus dem download Bereich verwenden, das wird derzeit nicht gepflegt.
