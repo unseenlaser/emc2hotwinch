@@ -1,17 +1,18 @@
-#summary Versions and files in trunk and branches
+#summary Versions and folders in trunk
 
 = Versions =
 
 emc2hotwinch supports currently EMC Version 2.3.x, based on Ubuntu 8.04 and Version 2.4.x, based on Ubuntu 10.04
 
-= 10.04 / 2.4.x =
+Please do not use the software in the download area.
 
-This is the actual Version in trunk. Further developments are made mainly here.
-
+Download the actual code with
 `svn checkout http://emc2hotwinch.googlecode.com/svn/trunk/ emc2hotwinch`
 
-= 8.04 / 2.3.x =
+after that, you should have the following folders:
+  * XYAB
+  * XYUV
+  * kinematic
+  * kinematic_Ub_08_04-EMC_2_3
 
-This is the original first Version. It is located now in branches/Ub_08_04-EMC_2_3. To download this Version: in svn checkout replace trunk by branches/Ub_08_04-EMC_2_3.
-
-`svn checkout http://emc2hotwinch.googlecode.com/svn/branches/Ub_08_04-EMC_2_3/ emc2hotwinch`
+See wiki "Installation" how to proceed.
