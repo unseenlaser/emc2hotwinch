@@ -10,9 +10,19 @@ Bevor man damit beginnt, sollte man wissen welche Ubuntu Version und welche EMC 
 
 = XY-UV oder XY-AB =
 
-Es gibt eine Variante die die QAchsen XY-UV verwendet und eine die XY-AB verwendet.
+Es gibt eine Variante die die Achsenpaare XY-UV verwendet und eine die XY-AB verwendet.
+Die urpsrünglich Variante war die XY-UV, gemäß cnc [http://de.wikipedia.org/wiki/Computerized_Numerical_Control#Maschinenachsen Achsenstandard].
+
+Allerdings hat diese wegen einiger EMC2 Eigenheiten zwei Nachteile:
+  * EMC2 erlaubt in der derzeitigen Version keine Lücken in der Achsdefinition. Das bedeuted, wenn wir Achse U verwenden wollen, müssen wir auch die Achsen XYZABC konfigurieren. Das ist optisch nicht so schön und ein bisschen lästig, gravierender ist noch:
+  * Im sogenannten "world" mode bei einer nicht-trivialen Kinematic kann man die Achsen UVW nicht joggen !
+
+PeterD hat deshalb eine Variante mit den Achsen XY-AB erstellt, die ich hiermit weiter pflegen will.
+
 
 = Installation der kinematic Konverter =
+
+Die Kinematic Konverter werden nur benötigt, wenn man die Seilwinden Version realisieren will. Bei "normalen" Linearachsen werden diese nicht benötigt.
 
 == Installieren der kompilierten Module ==
 Für die Kombinationnen Ubuntu 8.04 / EMC 2.3.x und Ubuntu 10.04 / EMC 2.4.x sind vorkompilierte Module vorhanden, die lediglich ins entsprchende Verzeichnis kopiert werden müssen.
