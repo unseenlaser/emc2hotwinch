@@ -1,0 +1,26 @@
+#summary Installation
+
+= Einführung =
+
+Die Installation besteht aus zwei Schritten:
+  * Erzeugen eines oder mehrerer Konfigurations-Verzeichnisses
+  * Installation des/der kinematic Konverter
+
+Bevor man damit beginnt, sollte man wissen welche Ubuntu Version und welche EMC Version installiert ist.
+
+= XY-UV oder XY-AB =
+
+Es gibt eine Variante die die QAchsen XY-UV verwendet und eine die XY-AB verwendet.
+
+= Installation der kinematic Konverter =
+
+== Installieren der kompilierten Module ==
+Für die Kombinationnen Ubuntu 8.04 / EMC 2.3.x und Ubuntu 10.04 / EMC 2.4.x sind vorkompilierte Module vorhanden, die lediglich ins entsprchende Verzeichnis kopiert werden müssen.
+
+== Kompilieren und installieren vom Quellcode ==
+
+
+= Konfiguratonsverzeichnis und Konfigurationsdateien =
+
+Die Konfigurationsverzeichnisse von EMC liegen normalerweise in ~/emc2/config. Dorthin kopiert man zunächst die kompletten Verzeichnisse XYUV aund XYAB.
+  
