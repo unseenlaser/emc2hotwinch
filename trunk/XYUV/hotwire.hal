@@ -129,23 +129,6 @@ net vdir <= stepgen.7.dir
 net venable axis.7.amp-enable-out => stepgen.7.enable
 
 # joint 8
-#setp stepgen.8.position-scale [AXIS_8]SCALE
-#setp stepgen.8.steplen 1
-#setp stepgen.8.stepspace 0
-#setp stepgen.8.dirhold 35000
-#setp stepgen.8.dirsetup 35000
-#setp stepgen.8.maxaccel [AXIS_8]STEPGEN_MAXACCEL
-#net j8pos-cmd axis.8.motor-pos-cmd => stepgen.8.position-cmd
-#net j8pos-fb stepgen.8.position-fb => axis.8.motor-pos-fb
-#net j8step <= stepgen.8.step
-#net j8dir <= stepgen.8.dir
-#net j8enable axis.8.amp-enable-out => stepgen.8.enable
 
 net estop-out <= iocontrol.0.user-enable-out
 net estop-out => iocontrol.0.emc-enable-in
-
-#loadusr -W hal_manualtoolchange
-#net tool-change iocontrol.0.tool-change => hal_manualtoolchange.change
-#net tool-changed iocontrol.0.tool-changed <= hal_manualtoolchange.changed
-#net tool-number iocontrol.0.tool-prep-number => hal_manualtoolchange.number
-#net tool-prepare-loopback iocontrol.0.tool-prepare => iocontrol.0.tool-prepared
