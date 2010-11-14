@@ -1,28 +1,33 @@
 # pinout for 4 stepper x y u v
-#
-# pin1
+# Gerhard Gleixner
+# GerhardGleixner@web.de
+
+# add pin inverter to dir outputs, if direction of motor is wrong:
+#setp parport.0.pin-??-out-invert 1
+
+# add reset generation to step outputs, if desired
+# doubles potential speed, but produces short pulses (5 usec)
+# uncomment reset funtion in main hal
+#setp parport.0.pin-??-out-reset 1
+
+
+# pin 1
 net estop-out => parport.0.pin-01-out
-# pin2
+# pin 2
 net xstep => parport.0.pin-02-out
-#setp parport.0.pin-02-out-reset 1
-# pin3
+# pin 3
 net xdir => parport.0.pin-03-out
-setp parport.0.pin-03-out-invert 1
-# pin4
+setp        parport.0.pin-03-out-invert 1
+# pin 4
 net ystep => parport.0.pin-04-out
-#setp parport.0.pin-04-out-reset 1
-# pin5
+# pin 5
 net ydir => parport.0.pin-05-out
-#setp parport.0.pin-03-out-invert 1
-# pin6
+# pin 6
 net ustep => parport.0.pin-06-out
-#setp parport.0.pin-06-out-reset 1
-# pin7
+# pin 7
 net udir => parport.0.pin-07-out
-#setp parport.0.pin-03-out-invert 1
-# pin8
+# pin 8
 net vstep => parport.0.pin-08-out
-#setp parport.0.pin-08-out-reset 1
-# pin9
+# pin 9
 net vdir => parport.0.pin-09-out
-setp parport.0.pin-09-out-invert 1
+setp        parport.0.pin-09-out-invert 1
