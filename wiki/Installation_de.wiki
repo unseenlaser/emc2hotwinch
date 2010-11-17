@@ -33,10 +33,27 @@ emc2 sollte bereits installiert sein. Dann sollte es im home Verzeichnis ein Ver
 Dann gibt man in einem Terminal ein:
 {{{
 cd ~/emc2
-svn
+svn checkout http://emc2hotwinch.googlecode.com/svn/trunk/ emc2hotwinch
+cd emc2hotwinch
+}}}
+Hier sollte es jetzt die folgenden Verzeichnisse geben:
+{{{
+XYUV
+XYAB
 }}}
 
+
 == Aktualisierung ==
+
+svn hat sich in speziellen Verzeichnissen (.svn) den heruntergeladenen Status gemerkt. Ich empfehle an diesen Verueichnissen NICHTS zu ändern.
+
+Mit
+{{{
+cd ~/emc2/emc2hotwinch
+svn update
+}}}
+kann man stets den aktuellen Stand herunterladen.
+
 
 = Installation der kinematic Konverter =
 
@@ -51,4 +68,7 @@ Für die Kombinationnen Ubuntu 8.04 / EMC 2.3.x und Ubuntu 10.04 / EMC 2.4.x sin
 = Konfiguratonsverzeichnis und Konfigurationsdateien =
 
 Die Konfigurationsverzeichnisse von EMC liegen normalerweise in ~/emc2/config. Dorthin kopiert man zunächst die kompletten Verzeichnisse XYUV aund XYAB.
+
+Mit den ini files in diesen Verzeichnissen kann emc2 jetzt prinzipiell gestartet werden.
+
   
