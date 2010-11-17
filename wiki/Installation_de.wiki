@@ -19,6 +19,24 @@ Allerdings hat diese wegen einiger EMC2 Eigenheiten zwei Nachteile:
 
 PeterD hat deshalb eine Variante mit den Achsen XY-AB erstellt, die ich hiermit weiter pflegen will.
 
+== Erstmalige Installation ==
+
+Alle Dateien werden mit svn Kommandos heruntergeladen. Falls svn noch nicht installiert ist, mit apt-get oder fem graphischen Paketmanager installieren.
+
+emc2 sollte bereits installiert sein. Dann sollte es im home Verzeichnis ein Verzeichnis "emc2" geben, in dem Konfigurationen, nc files etc angelegt werden, etwa so:
+{{{
+/home/gerd/emc2/configs     --- Verzeichnis für Konfigurationen
+/home/gerd/emc2/nc-files    --- Verzeichnis für Konfigurationen
+}}}
+"gerd" steht für den Namen des angemeldeten Linux users.
+
+Dann gibt man in einem Terminal ein:
+{{{
+cd ~/emc2
+svn
+}}}
+
+== Aktualisierung ==
 
 = Installation der kinematic Konverter =
 
