@@ -32,8 +32,9 @@ Hier sollte es jetzt die folgenden Verzeichnisse geben:
 {{{
 XYUV
 XYAB
+kinematic
+kinematic_Ub_08_04-EMC_2_3
 }}}
-
 
 == Aktualisierung ==
 
