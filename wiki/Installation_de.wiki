@@ -62,12 +62,24 @@ Die Kinematic Konverter werden nur benötigt, wenn man die Seilwinden Version re
 == Installieren der kompilierten Module ==
 Für die Kombinationnen Ubuntu 8.04 / EMC 2.3.x und Ubuntu 10.04 / EMC 2.4.x sind vorkompilierte Module vorhanden, die lediglich ins entsprchende Verzeichnis kopiert werden müssen.
 
+Ubuntu 10.04:
+{{{
+cd ~/emc2/emc2hotwinch/kinematic
+sudo cp *.ko /usr/realtime-2.6.32-122-rtai/modules/emc2/
+}}}
+
+Ubuntu 8.04:
+{{{
+cd ~/emc2/emc2hotwinch/kinematic_Ub_08_04-EMC_2_3
+sudo cp *.ko /usr/realtime-2.6.24-16-rtai/modules/emc2/
+}}}
+
 == Kompilieren und installieren vom Quellcode ==
 
 
 = Konfiguratonsverzeichnis und Konfigurationsdateien =
 
-Die Konfigurationsverzeichnisse von EMC liegen normalerweise in ~/emc2/config. Dorthin kopiert man zunächst die kompletten Verzeichnisse XYUV aund XYAB.
+Die Konfigurationsverzeichnisse von EMC liegen normalerweise in ~/emc2/configs. Dorthin kopiert man zunächst die kompletten Verzeichnisse XYUV aund XYAB.
 
 Mit den ini files in diesen Verzeichnissen kann emc2 jetzt prinzipiell gestartet werden.
 
