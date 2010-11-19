@@ -45,6 +45,8 @@ Referenzpunkt sollte möglichst in der Mitte zwischen beiden Motoren liegen und 
 
 == Kalibrierung ==
 
+<img src="http://emc2hotwinch.googlecode.com/files/Geometrie.JPG" />
+
 Für die Kalibrierung des Systems sind folgende Parameter entscheidend:
   * Abstand der Motoren in beiden Ebenen
   * Seillängen im Referenzpunkt
