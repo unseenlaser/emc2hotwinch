@@ -22,6 +22,8 @@ in /etc/default/grub, diese Zeile:
 
 Achtung: man braucht dazu Administrator Rechte. Also zB den editor mit sudo starten.
 
+`sudo gedit /etc/default/grub`, falls gedit der editor ist
+
 dann `sudo update-grub` ausführen und neu booten
 
 
