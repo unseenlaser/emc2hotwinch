@@ -29,6 +29,6 @@ Das funktioniert nur, wenn das System ein LAPIC hat.
 
 Wenn man daruafhin die folgende Meldung erhält:
 
-`[ 0.080250] Local APIC not detected. Using dummy APIC emulation.`
+`[ 0.000000] Local APIC not detected. Using dummy APIC emulation.`
 
 hat man Pech mit diesem PC. Dann kann man entweder auf Ubuntu 8.04 zurückgehen, oder einen anderen PC probieren.
