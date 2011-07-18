@@ -1,0 +1,49 @@
+# -------------------------------------------------------
+# joypad for x y u v foamcutting machine
+# Gerhard Gleixner
+# GerhardGleixner@web.de
+# -------------------------------------------------------
+
+loadusr -W hal_input -KRAL Thrustmaster
+loadrt mux2 count=1
+# add scale for axis to invert direct
+loadrt scale count=4
+
+addf mux2.0 servo-thread
+addf scale.0 servo-thread
+addf scale.1 servo-thread
+addf scale.2 servo-thread
+addf scale.3 servo-thread
+
+# set jog speeds low and high
+setp mux2.0.in0 100
+setp mux2.0.in1 400
+net joy-speed-1 mux2.0.sel <= input.0.btn-tl2
+net joy-speed-final halui.jog-speed <= mux2.0.out
+#setp halui.jog-speed 200
+
+# invert direction by setting gain = -1
+setp scale.0.gain 1
+setp scale.0.offset 0
+setp scale.1.gain -1
+setp scale.1.offset 0
+setp scale.2.gain 1
+setp scale.2.offset 0
+setp scale.3.gain -1
+setp scale.3.offset 0
+
+# read joypad
+net joy-x-jog scale.0.in <= input.0.abs-rz-position 
+net joy-y-jog scale.1.in <= input.0.abs-throttle-position 
+net joy-u-jog scale.2.in <= input.0.abs-x-position 
+net joy-v-jog scale.3.in <= input.0.abs-y-position
+
+# set jog
+net joy-xs-jog halui.jog.0.analog <= scale.0.out 
+net joy-ys-jog halui.jog.1.analog <= scale.1.out
+net joy-us-jog halui.jog.6.analog <= scale.2.out 
+net joy-vs-jog halui.jog.7.analog <= scale.3.out 
+
+net joint-mode halui.mode.joint  <= input.0.btn-b
+net world-mode halui.mode.teleop <= input.0.btn-c
+
