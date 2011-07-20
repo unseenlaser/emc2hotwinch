@@ -2,7 +2,104 @@
 # Die Befehle in dieser Datei werden nach der AXIS GUI (und PyVCP-Panel) ausgeführt.
 # Diese Datei wird nicht überschrieben, wenn stepconf erneut ausgeführt wird.
 
-net my_joint halui.mode.joint  <= pyvcp.joint
+# some logic to seperate joint an world mode
+#############################################
+
+loadrt or2 count=8
+loadrt and2 count=16
+
+addf or2.0 servo-thread
+addf or2.1 servo-thread
+addf or2.2 servo-thread
+addf or2.3 servo-thread
+addf or2.4 servo-thread
+addf or2.5 servo-thread
+addf or2.6 servo-thread
+addf or2.7 servo-thread
+
+addf and2.0 servo-thread
+addf and2.1 servo-thread
+addf and2.2 servo-thread
+addf and2.3 servo-thread
+addf and2.4 servo-thread
+addf and2.5 servo-thread
+addf and2.6 servo-thread
+addf and2.7 servo-thread
+addf and2.8 servo-thread
+addf and2.9 servo-thread
+addf and2.10 servo-thread
+addf and2.11 servo-thread
+addf and2.12 servo-thread
+addf and2.13 servo-thread
+addf and2.14 servo-thread
+addf and2.15 servo-thread
+
+# enable joint or world
+net my_mode-is-joint  <= halui.mode.is-joint
+net my_mode-is-joint  => and2.0.in0 and2.1.in0 and2.2.in0 and2.3.in0 and2.4.in0 and2.5.in0 and2.6.in0 and2.7.in0 
+net my_mode-is-teleop <= halui.mode.is-teleop
+net my_mode-is-teleop => and2.8.in0 and2.9.in0 and2.10.in0 and2.11.in0 and2.12.in0 and2.13.in0 and2.14.in0 and2.15.in0
+
+# jog joint buttons
+net my_jogBut0m and2.0.in1  <= pyvcp.jog0-
+net my_jogBut0p and2.1.in1  <= pyvcp.jog0+
+net my_jogBut1m and2.2.in1  <= pyvcp.jog1-
+net my_jogBut1p and2.3.in1  <= pyvcp.jog1+
+net my_jogBut6m and2.4.in1  <= pyvcp.jog6-
+net my_jogBut6p and2.5.in1  <= pyvcp.jog6+
+net my_jogBut7m and2.6.in1  <= pyvcp.jog7-
+net my_jogBut7p and2.7.in1  <= pyvcp.jog7+
+
+# jog joint signals
+net my_jogJoint0m or2.0.in0 <= and2.0.out
+net my_jogJoint0p or2.1.in0 <= and2.1.out
+net my_jogJoint1m or2.2.in0 <= and2.2.out
+net my_jogJoint1p or2.3.in0 <= and2.3.out
+net my_jogJoint6m or2.4.in0 <= and2.4.out
+net my_jogJoint6p or2.5.in0 <= and2.5.out
+net my_jogJoint7m or2.6.in0 <= and2.6.out
+net my_jogJoint7p or2.7.in0 <= and2.7.out
+
+# jog world buttons
+net my_jogButXm and2.8.in1   <= pyvcp.jogX-
+net my_jogButXp and2.9.in1   <= pyvcp.jogX+
+net my_jogButYm and2.10.in1  <= pyvcp.jogY-
+net my_jogButYp and2.11.in1  <= pyvcp.jogY+
+net my_jogButUm and2.12.in1  <= pyvcp.jogU-
+net my_jogButUp and2.13.in1  <= pyvcp.jogU+
+net my_jogButVm and2.14.in1  <= pyvcp.jogV-
+net my_jogButVp and2.15.in1  <= pyvcp.jogV+
+
+# jog world signals
+net my_jogWorld0m or2.0.in1  <= and2.8.out
+net my_jogWorld0p or2.1.in1  <= and2.9.out
+net my_jogWorld1m or2.2.in1 <= and2.10.out
+net my_jogWorld1p or2.3.in1 <= and2.11.out
+net my_jogWorld6m or2.4.in1 <= and2.12.out
+net my_jogWorld6p or2.5.in1 <= and2.13.out
+net my_jogWorld7m or2.6.in1 <= and2.14.out
+net my_jogWorld7p or2.7.in1 <= and2.15.out
+
+# final output
+net my_jog0m halui.jog.0.minus  <= or2.0.out
+net my_jog0p halui.jog.0.plus   <= or2.1.out
+net my_jog1m halui.jog.1.minus  <= or2.2.out
+net my_jog1p halui.jog.1.plus   <= or2.3.out
+net my_jog6m halui.jog.6.minus  <= or2.4.out
+net my_jog6p halui.jog.6.plus   <= or2.5.out
+net my_jog7m halui.jog.7.minus  <= or2.6.out
+net my_jog7p halui.jog.7.plus   <= or2.7.out
+
+# jog speed
+############################################
+net my_jspeed halui.jog-speed <= pyvcp.jogspeed-f
+
+# switch mode
+############################################
+net my_joint halui.mode.joint   <= pyvcp.joint
 net my_world halui.mode.teleop  <= pyvcp.world
+
+net my_home halui.home-all  <= pyvcp.homeall
+
 
 

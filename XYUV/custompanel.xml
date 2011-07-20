@@ -1,27 +1,242 @@
 <?xml version='1.0' encoding='UTF-8'?>
-    <pyvcp>
+<pyvcp>
 
     <labelframe text="Mode">
-    <font>("Helvetica",16)</font>
-
-    <!-- the X jog buttons -->
-    <hbox>
-    <relief>RAISED</relief>
-    <bd>3</bd>
-    <button>
-    <font>("Helvetica",14)</font>
-    <width>3</width>
-    <halpin>"world"</halpin>
-    <text>"World"</text>
-    </button>
-    <button>
-    <font>("Helvetica",14)</font>
-    <width>3</width>
-    <halpin>"joint"</halpin>
-    <text>"Joint"</text>
-    </button>
-    </hbox>
-
+        <font>("Helvetica",10)</font>
+        <hbox>
+    	    <button>
+    		    <font>("Helvetica",14)</font>
+    		    <width>3</width>
+    		    <halpin>"world"</halpin>
+                <text>"World"</text>
+            </button>
+            <button>
+                <font>("Helvetica",14)</font>
+                <width>3</width>
+                <halpin>"joint"</halpin>
+                <text>"Joint"</text>
+            </button>
+        </hbox>
     </labelframe>
 
-    </pyvcp>
+    <labelframe text="Jogspeed">
+        <font>("Helvetica",10)</font>
+        <scale>
+            <font>("Helvetica",16)</font>
+            <width>"25"</width>
+            <halpin>"jogspeed"</halpin>
+            <resolution>10</resolution>
+            <orient>HORIZONTAL</orient>
+            <initval>100</initval>
+            <min_>10</min_>
+            <max_>500</max_>
+        </scale>
+    </labelframe>
+
+<tabs>
+    <font>("Helvetica",14)</font>
+    <names>["Joint", "World"]</names>
+    <vbox>
+      <hbox>
+        <labelframe text="Jog 0">
+             <vbox>
+                <hbox>
+                 <boxfill fill="none"/>
+                 <button>
+                    <font>("Helvetica",16)</font>
+                    <width>3</width>
+                    <halpin>"jog0-"</halpin>
+                    <text>"-"</text>
+                 </button>
+                 <label>
+                    <width>2</width>
+                    <text>" "</text>
+                    <font>("Helvetica",20)</font>
+                 </label>                 
+                </hbox>
+                <boxfill fill="none"/>
+                <boxanchor anchor="e"/>
+                <button>
+                    <font>("Helvetica",16)</font>
+                    <width>3</width>
+                    <halpin>"jog0+"</halpin>
+                    <text>"+"</text>
+                </button>
+             </vbox>
+        </labelframe>
+        <labelframe text="Jog 1">
+             <vbox>
+                <hbox>
+                 <boxfill fill="none"/>
+                 <label>
+                    <width>2</width>
+                    <text>" "</text>
+                    <font>("Helvetica",20)</font>
+                 </label>                 
+                 <button>
+                    <font>("Helvetica",16)</font>
+                    <width>3</width>
+                    <halpin>"jog1-"</halpin>
+                    <text>"-"</text>
+                 </button>
+                </hbox>
+                <boxfill fill="none"/>
+                <boxanchor anchor="w"/>
+                 <button>
+                    <font>("Helvetica",16)</font>
+                    <width>3</width>
+                    <halpin>"jog1+"</halpin>
+                    <text>"+"</text>
+                </button>
+             </vbox>
+        </labelframe>
+      </hbox>
+      <hbox>
+        <labelframe text="Jog 6">
+             <vbox>
+                <hbox>                 <label>
+                    <width>2</width>
+                    <text>" "</text>
+                    <font>("Helvetica",20)</font>
+                 </label>                 
+
+                 <boxfill fill="none"/>
+                 <button>
+                    <font>("Helvetica",16)</font>
+                    <width>3</width>
+                    <halpin>"jog6-"</halpin>
+                    <text>"-"</text>
+                 </button>
+                 <label>
+                    <width>2</width>
+                    <text>" "</text>
+                    <font>("Helvetica",20)</font>
+                 </label>                 
+                </hbox>
+                <boxfill fill="none"/>
+                <boxanchor anchor="e"/>
+                <button>
+                    <font>("Helvetica",16)</font>
+                    <width>3</width>
+                    <halpin>"jog6+"</halpin>
+                    <text>"+"</text>
+                </button>
+             </vbox>
+        </labelframe>
+        <labelframe text="Jog 7">
+             <vbox>
+                <hbox>
+                 <boxfill fill="none"/>
+                 <label>
+                    <width>2</width>
+                    <text>" "</text>
+                    <font>("Helvetica",20)</font>
+                 </label>                 
+                 <button>
+                    <font>("Helvetica",16)</font>
+                    <width>3</width>
+                    <halpin>"jog7-"</halpin>
+                    <text>"-"</text>
+                 </button>
+                </hbox>
+                <boxfill fill="none"/>
+                <boxanchor anchor="w"/>
+                 <button>
+                    <font>("Helvetica",16)</font>
+                    <width>3</width>
+                    <halpin>"jog7+"</halpin>
+                    <text>"+"</text>
+                </button>
+             </vbox>
+        </labelframe>
+      </hbox>
+    <labelframe text="Homing">
+        <font>("Helvetica",10)</font>
+        <hbox>
+    	    <button>
+    		    <font>("Helvetica",14)</font>
+    		    <halpin>"homeall"</halpin>
+                <text>"Home ALL"</text>
+            </button>
+        </hbox>
+    </labelframe>
+    </vbox>
+
+    <vbox>
+        <labelframe text="Jog X-Y">
+           <vbox>
+                <boxfill fill="none"/>
+                <button>
+                    <font>("Helvetica",12)</font>
+                    <width>4</width>
+                    <halpin>"jogY+"</halpin>
+                    <text>"up"</text>
+                </button>
+                <hbox>
+                  <button>
+                    <font>("Helvetica",12)</font>
+                    <width>4</width>
+                    <halpin>"jogX-"</halpin>
+                    <text>"left"</text>
+                  </button>
+                  <label>
+                    <width>1</width>
+                    <text>" "</text>
+                    <font>("Helvetica",20)</font>
+                  </label>                 
+                  <button>
+                    <font>("Helvetica",12)</font>
+                    <width>4</width>
+                    <halpin>"jogX+"</halpin>
+                    <text>"right"</text>
+                  </button>
+                </hbox>
+                <button>
+                    <font>("Helvetica",12)</font>
+                    <width>4</width>
+                    <halpin>"jogY-"</halpin>
+                    <text>"down"</text>
+                </button>
+           </vbox>
+        </labelframe>
+        <labelframe text="Jog U-V">
+           <vbox>
+                <boxfill fill="none"/>
+                <button>
+                    <font>("Helvetica",12)</font>
+                    <width>4</width>
+                    <halpin>"jogV+"</halpin>
+                    <text>"up"</text>
+                </button>
+                <hbox>
+                  <button>
+                    <font>("Helvetica",12)</font>
+                    <width>4</width>
+                    <halpin>"jogU-"</halpin>
+                    <text>"left"</text>
+                  </button>
+                  <label>
+                    <width>1</width>
+                    <text>" "</text>
+                    <font>("Helvetica",20)</font>
+                  </label>                 
+                  <button>
+                    <font>("Helvetica",12)</font>
+                    <width>4</width>
+                    <halpin>"jogU+"</halpin>
+                    <text>"right"</text>
+                  </button>
+                </hbox>
+                <button>
+                    <font>("Helvetica",12)</font>
+                    <width>4</width>
+                    <halpin>"jogV-"</halpin>
+                    <text>"down"</text>
+                </button>
+           </vbox>
+        </labelframe>
+    </vbox>
+</tabs>
+
+
+</pyvcp>
