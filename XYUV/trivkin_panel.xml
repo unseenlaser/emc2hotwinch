@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pyvcp>
+
+    <labelframe text="Jogspeed">
+        <font>("Helvetica",10)</font>
+        <scale>
+            <font>("Helvetica",16)</font>
+            <width>"25"</width>
+            <halpin>"jogspeed"</halpin>
+            <resolution>10</resolution>
+            <orient>HORIZONTAL</orient>
+            <initval>100</initval>
+            <min_>10</min_>
+            <max_>500</max_>
+        </scale>
+    </labelframe>
+
+    <vbox>
+        <labelframe text="Jog X-Y">
+           <vbox>
+                <boxfill fill="none"/>
+                <button>
+                    <font>("Helvetica",12)</font>
+                    <width>4</width>
+                    <halpin>"jogY+"</halpin>
+                    <text>"up"</text>
+                </button>
+                <hbox>
+                  <button>
+                    <font>("Helvetica",12)</font>
+                    <width>4</width>
+                    <halpin>"jogX-"</halpin>
+                    <text>"left"</text>
+                  </button>
+                  <label>
+                    <width>1</width>
+                    <text>" "</text>
+                    <font>("Helvetica",20)</font>
+                  </label>                 
+                  <button>
+                    <font>("Helvetica",12)</font>
+                    <width>4</width>
+                    <halpin>"jogX+"</halpin>
+                    <text>"right"</text>
+                  </button>
+                </hbox>
+                <button>
+                    <font>("Helvetica",12)</font>
+                    <width>4</width>
+                    <halpin>"jogY-"</halpin>
+                    <text>"down"</text>
+                </button>
+           </vbox>
+        </labelframe>
+        <labelframe text="Jog U-V">
+           <vbox>
+                <boxfill fill="none"/>
+                <button>
+                    <font>("Helvetica",12)</font>
+                    <width>4</width>
+                    <halpin>"jogV+"</halpin>
+                    <text>"up"</text>
+                </button>
+                <hbox>
+                  <button>
+                    <font>("Helvetica",12)</font>
+                    <width>4</width>
+                    <halpin>"jogU-"</halpin>
+                    <text>"left"</text>
+                  </button>
+                  <label>
+                    <width>1</width>
+                    <text>" "</text>
+                    <font>("Helvetica",20)</font>
+                  </label>                 
+                  <button>
+                    <font>("Helvetica",12)</font>
+                    <width>4</width>
+                    <halpin>"jogU+"</halpin>
+                    <text>"right"</text>
+                  </button>
+                </hbox>
+                <button>
+                    <font>("Helvetica",12)</font>
+                    <width>4</width>
+                    <halpin>"jogV-"</halpin>
+                    <text>"down"</text>
+                </button>
+           </vbox>
+        </labelframe>
+        <labelframe text="Homing">
+            <font>("Helvetica",10)</font>
+            <hbox>
+    	        <button>
+    		        <font>("Helvetica",14)</font>
+    		        <halpin>"homeall"</halpin>
+                    <text>"Home ALL"</text>
+                </button>
+            </hbox>
+        </labelframe>
+    </vbox>
+
+</pyvcp>

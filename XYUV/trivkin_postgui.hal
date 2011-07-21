@@ -1,0 +1,24 @@
+# Benutzerdefinierte HAL-Anweisungen können nachfolgend angegeben werden
+# Die Befehle in dieser Datei werden nach der AXIS GUI (und PyVCP-Panel) ausgeführt.
+# Diese Datei wird nicht überschrieben, wenn stepconf erneut ausgeführt wird.
+
+
+# jog world buttons
+# final output
+net my_jog0m halui.jog.0.minus  <= pyvcp.jogX-
+net my_jog0p halui.jog.0.plus   <= pyvcp.jogX+
+net my_jog1m halui.jog.1.minus  <= pyvcp.jogY-
+net my_jog1p halui.jog.1.plus   <= pyvcp.jogY+
+net my_jog6m halui.jog.6.minus  <= pyvcp.jogU-
+net my_jog6p halui.jog.6.plus   <= pyvcp.jogU+
+net my_jog7m halui.jog.7.minus  <= pyvcp.jogV-
+net my_jog7p halui.jog.7.plus   <= pyvcp.jogV+
+
+# jog speed
+############################################
+net my_jspeed halui.jog-speed <= pyvcp.jogspeed-f
+
+net my_home halui.home-all  <= pyvcp.homeall
+
+
+
